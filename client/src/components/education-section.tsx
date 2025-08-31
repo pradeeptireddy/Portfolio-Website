@@ -21,7 +21,7 @@ export default function EducationSection() {
   ];
 
   return (
-    <section id="education" className="py-12 sm:py-16 px-4 sm:px-6 section-transition">
+    <section id="education" className="py-6 sm:py-8 px-4 sm:px-6 section-transition">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-8" data-testid="education-title">
           Education

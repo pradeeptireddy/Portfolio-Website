@@ -6,7 +6,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-12 sm:py-16 bg-black text-white flex items-center justify-center px-4 sm:px-6 section-transition">
+    <section id="contact" className="py-8 sm:py-10 bg-black text-white flex items-center justify-center px-4 sm:px-6 section-transition">
       <div className="text-center">
         <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal leading-none mb-4 tracking-tight" data-testid="contact-name">
           PRADEEPTI REDDY TANDRA
