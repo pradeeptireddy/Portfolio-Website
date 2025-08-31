@@ -12,13 +12,7 @@ export default function ContactSection() {
           PRADEEPTI REDDY
         </h1>
         
-        <div className="space-y-2 mb-6">
-          <p className="text-sm text-gray-300" data-testid="contact-title">
-            Full Stack Engineer
-          </p>
-        </div>
-        
-        <div className="max-w-2xl mx-auto mb-8">
+        <div className="max-w-2xl mx-auto mb-6">
           <form 
             action="https://formspree.io/f/mdklzlzn" 
             method="POST" 
