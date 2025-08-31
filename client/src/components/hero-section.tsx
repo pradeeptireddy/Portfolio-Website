@@ -2,9 +2,16 @@ export default function HeroSection() {
   return (
     <section id="about" className="py-12 sm:py-16 flex items-center justify-center px-4 sm:px-6 pt-20 section-transition">
       <div className="max-w-4xl mx-auto text-left">
-        <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal leading-none mb-6 tracking-tight" data-testid="hero-title">
-          ABOUT ME
-        </h1>
+        <div className="flex items-start gap-6 mb-6">
+          <div className="text-6xl sm:text-7xl lg:text-8xl font-serif text-muted-foreground/20 leading-none" data-testid="hero-initials">
+            PR
+          </div>
+          <div className="flex-1">
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal leading-none tracking-tight" data-testid="hero-title">
+              ABOUT ME
+            </h1>
+          </div>
+        </div>
         
         <div className="max-w-2xl space-y-2 text-sm sm:text-base leading-normal text-muted-foreground">
           <p data-testid="hero-description-1">
