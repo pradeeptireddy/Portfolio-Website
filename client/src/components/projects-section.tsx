@@ -23,23 +23,23 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20 px-6 section-transition">
+    <section id="projects" className="py-12 px-6 section-transition">
       <div className="max-w-4xl mx-auto">
-        <div className="mb-16">
+        <div className="mb-8">
           <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-4" data-testid="projects-title">
             Featured Projects
           </h2>
           
-          <div className="space-y-12">
+          <div className="space-y-8">
             {projects.map((project, index) => (
               <div key={index} className="border-l-2 border-muted pl-8" data-testid={`project-${index}`}>
-                <h3 className="text-2xl font-serif mb-3" data-testid={`project-title-${index}`}>
+                <h3 className="text-lg font-serif mb-2" data-testid={`project-title-${index}`}>
                   {project.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider" data-testid={`project-tech-${index}`}>
+                <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider" data-testid={`project-tech-${index}`}>
                   {project.technologies}
                 </p>
-                <p className="text-lg leading-relaxed mb-4" data-testid={`project-description-${index}`}>
+                <p className="text-sm leading-relaxed mb-3" data-testid={`project-description-${index}`}>
                   {project.description}
                 </p>
                 <div className="inline-block">

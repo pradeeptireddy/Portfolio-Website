@@ -19,19 +19,19 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section className="py-20 px-6 bg-secondary/50">
+    <section className="py-10 px-6 bg-secondary/50">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-12" data-testid="skills-title">
+        <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-6" data-testid="skills-title">
           Technical Expertise
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-6">
           {skillAreas.map((skill, index) => (
             <div key={index} data-testid={`skill-area-${index}`}>
-              <h3 className="text-xl font-serif mb-6" data-testid={`skill-title-${index}`}>
+              <h3 className="text-base font-serif mb-3" data-testid={`skill-title-${index}`}>
                 {skill.title}
               </h3>
-              <p className="text-lg leading-relaxed mb-4" data-testid={`skill-description-${index}`}>
+              <p className="text-sm leading-relaxed mb-3" data-testid={`skill-description-${index}`}>
                 {skill.description}
               </p>
             </div>

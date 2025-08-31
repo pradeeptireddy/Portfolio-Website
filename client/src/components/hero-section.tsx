@@ -1,12 +1,12 @@
 export default function HeroSection() {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center px-6 pt-20 section-transition">
+    <section id="about" className="py-16 flex items-center justify-center px-6 pt-20 section-transition">
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-normal leading-none mb-8 tracking-tight" data-testid="hero-title">
+        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-normal leading-none mb-6 tracking-tight" data-testid="hero-title">
           WHO I AM
         </h1>
         
-        <div className="max-w-2xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground">
+        <div className="max-w-2xl mx-auto space-y-4 text-base leading-relaxed text-muted-foreground">
           <p data-testid="hero-description-1">
             Full-stack software engineer with a background in healthcare technology, focused on building accessible, data-rich applications for patients and researchers. Proficient in React, Python, and REST APIs, with experience turning complex datasets into intuitive interfaces.
           </p>

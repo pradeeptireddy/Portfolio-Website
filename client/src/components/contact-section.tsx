@@ -7,13 +7,13 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="min-h-screen bg-black text-white flex items-center justify-center px-6 section-transition">
+    <section id="contact" className="py-16 bg-black text-white flex items-center justify-center px-6 section-transition">
       <div className="text-center">
-        <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-normal leading-none mb-8 tracking-tight" data-testid="contact-name">
+        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-normal leading-none mb-6 tracking-tight" data-testid="contact-name">
           PRADEEPTI REDDY
         </h1>
         
-        <div className="space-y-4 mb-12">
+        <div className="space-y-3 mb-8">
           <p className="text-lg md:text-xl text-gray-300" data-testid="contact-title">
             Full Stack Engineer
           </p>
@@ -22,7 +22,7 @@ export default function ContactSection() {
           </p>
         </div>
         
-        <div className="space-y-6 mb-16">
+        <div className="space-y-4 mb-12">
           <p className="text-base text-gray-400" data-testid="contact-prompt">
             Get in touch at
           </p>

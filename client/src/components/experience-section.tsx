@@ -36,26 +36,26 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id="resume" className="py-20 px-6 section-transition">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-12" data-testid="experience-title">
+    <section id="resume" className="py-12 px-6 section-transition">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-8" data-testid="experience-title">
           Professional Experience
         </h2>
         
-        <div className="space-y-16">
+        <div className="grid md:grid-cols-2 gap-8 space-y-0">
           {experiences.map((experience, index) => (
             <div key={index} data-testid={`experience-${index}`}>
-              <h3 className="text-2xl font-serif mb-2" data-testid={`experience-title-${index}`}>
+              <h3 className="text-lg font-serif mb-1" data-testid={`experience-title-${index}`}>
                 {experience.title}
               </h3>
-              <p className="text-lg text-muted-foreground mb-1" data-testid={`experience-company-${index}`}>
+              <p className="text-base text-muted-foreground mb-1" data-testid={`experience-company-${index}`}>
                 {experience.company} {experience.location && `| ${experience.location}`}
               </p>
-              <p className="text-sm text-muted-foreground mb-6 uppercase tracking-wider" data-testid={`experience-period-${index}`}>
+              <p className="text-xs text-muted-foreground mb-4 uppercase tracking-wider" data-testid={`experience-period-${index}`}>
                 {experience.period}
               </p>
               
-              <div className="space-y-4 text-lg leading-relaxed">
+              <div className="space-y-3 text-sm leading-relaxed">
                 {experience.description.map((paragraph, pIndex) => (
                   <p key={pIndex} data-testid={`experience-description-${index}-${pIndex}`}>
                     {paragraph}
