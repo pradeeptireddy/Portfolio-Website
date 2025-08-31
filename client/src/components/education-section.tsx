@@ -27,10 +27,10 @@ export default function EducationSection() {
           Education
         </h2>
         
-        <div className="space-y-6">
+        <div className="space-y-4">
           {education.map((edu, index) => (
             <div key={index} className="border-l-2 border-muted pl-4 sm:pl-8" data-testid={`education-${index}`}>
-              <div className="flex flex-wrap items-baseline gap-2 mb-1">
+              <div className="flex flex-wrap items-baseline gap-2 mb-2">
                 <h3 className="text-lg font-serif" data-testid={`education-degree-${index}`}>
                   {edu.degree}
                 </h3>
@@ -44,7 +44,7 @@ export default function EducationSection() {
                 </p>
               </div>
               {edu.specialization && (
-                <p className="text-sm text-muted-foreground" data-testid={`education-specialization-${index}`}>
+                <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`education-specialization-${index}`}>
                   {edu.specialization}
                 </p>
               )}
