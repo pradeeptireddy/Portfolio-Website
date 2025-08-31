@@ -6,7 +6,7 @@ export default function HeroSection() {
           ABOUT ME
         </h1>
         
-        <div className="max-w-2xl space-y-4 text-sm sm:text-base leading-relaxed text-muted-foreground">
+        <div className="max-w-2xl space-y-2 text-sm sm:text-base leading-normal text-muted-foreground">
           <p data-testid="hero-description-1">
             Full-stack software engineer with a background in healthcare technology, focused on building accessible, data-rich applications for patients and researchers. Proficient in React, Python, and REST APIs, with experience turning complex datasets into intuitive interfaces.
           </p>
