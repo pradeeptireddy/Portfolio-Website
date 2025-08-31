@@ -21,24 +21,6 @@ export default function ContactSection() {
           </p>
         </div>
         
-        <div className="space-y-4 mb-8">
-          <p className="text-base text-gray-400" data-testid="contact-prompt">
-            Get in touch at
-          </p>
-          
-          <div>
-            <p className="text-base mb-6">
-              <a 
-                href="mailto:pradeeptireddy@gmail.com" 
-                className="hover:text-gray-300 transition-colors"
-                data-testid="contact-email"
-              >
-                pradeeptireddy@gmail.com
-              </a>
-            </p>
-          </div>
-        </div>
-
         <div className="max-w-2xl mx-auto mb-8">
           <form 
             action="https://formspree.io/f/mdklzlzn" 
