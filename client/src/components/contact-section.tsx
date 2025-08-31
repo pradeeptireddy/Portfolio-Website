@@ -9,7 +9,7 @@ export default function ContactSection() {
     <section id="contact" className="py-12 sm:py-16 bg-black text-white flex items-center justify-center px-4 sm:px-6 section-transition">
       <div className="text-center">
         <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal leading-none mb-6 tracking-tight" data-testid="contact-name">
-          PRADEEPTI REDDY
+          PRADEEPTI REDDY TANDRA
         </h1>
         
         <div className="max-w-2xl mx-auto mb-6">
