@@ -2,7 +2,6 @@ export default function ContactSection() {
   const socialLinks = [
     { name: "GITHUB", url: "https://github.com/pradeeptireddy" },
     { name: "LINKEDIN", url: "https://linkedin.com/in/pradeeptireddy" },
-    { name: "TWITTER", url: "https://twitter.com/pradeeptireddy" },
     { name: "PORTFOLIO", url: "#" }
   ];
 
@@ -27,7 +26,7 @@ export default function ContactSection() {
             Get in touch at
           </p>
           
-          <div className="space-y-2">
+          <div>
             <p className="text-base">
               <a 
                 href="mailto:pradeeptireddy@gmail.com" 
@@ -35,15 +34,6 @@ export default function ContactSection() {
                 data-testid="contact-email"
               >
                 pradeeptireddy@gmail.com
-              </a>
-            </p>
-            <p className="text-base">
-              <a 
-                href="tel:+16178990925" 
-                className="hover:text-gray-300 transition-colors"
-                data-testid="contact-phone"
-              >
-                (617) 899-0925
               </a>
             </p>
           </div>
