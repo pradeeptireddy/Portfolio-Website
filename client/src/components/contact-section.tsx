@@ -1,7 +1,7 @@
 export default function ContactSection() {
   const socialLinks = [
     { name: "GITHUB", url: "https://github.com/pradeeptireddy" },
-    { name: "LINKEDIN", url: "https://linkedin.com/in/pradeeptireddy" },
+    { name: "LINKEDIN", url: "https://www.linkedin.com/in/pradeeptireddy" },
     { name: "PORTFOLIO", url: "#" }
   ];
 
