@@ -21,21 +21,47 @@ export default function ContactSection() {
           </p>
         </div>
         
-        <div className="max-w-md mx-auto mb-8">
+        <div className="space-y-4 mb-8">
+          <p className="text-base text-gray-400" data-testid="contact-prompt">
+            Get in touch at
+          </p>
+          
+          <div>
+            <p className="text-base mb-6">
+              <a 
+                href="mailto:pradeeptireddy@gmail.com" 
+                className="hover:text-gray-300 transition-colors"
+                data-testid="contact-email"
+              >
+                pradeeptireddy@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className="max-w-2xl mx-auto mb-8">
           <form 
             action="https://formspree.io/f/mdklzlzn" 
             method="POST" 
             className="space-y-4"
             data-testid="contact-form"
           >
-            <div>
+            <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
                 name="name"
                 placeholder="Your Name"
                 required
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-gray-500 transition-colors"
+                className="px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-gray-500 transition-colors"
                 data-testid="contact-name-input"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                className="px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-gray-500 transition-colors"
+                data-testid="contact-email-input"
               />
             </div>
             
@@ -55,7 +81,7 @@ export default function ContactSection() {
                 name="message"
                 placeholder="Your Message"
                 required
-                rows={4}
+                rows={5}
                 className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-gray-500 transition-colors resize-none"
                 data-testid="contact-message-input"
               />
