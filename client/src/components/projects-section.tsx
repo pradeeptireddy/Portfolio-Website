@@ -25,31 +25,29 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-12 sm:py-16 px-4 sm:px-6 section-transition">
       <div className="max-w-4xl mx-auto">
-        <div className="mb-8">
-          <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-4" data-testid="projects-title">
-            Featured Projects
-          </h2>
-          
-          <div className="space-y-8">
-            {projects.map((project, index) => (
-              <div key={index} className="border-l-2 border-muted pl-4 sm:pl-8" data-testid={`project-${index}`}>
-                <h3 className="text-lg font-serif mb-2" data-testid={`project-title-${index}`}>
-                  {project.title}
-                </h3>
-                <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider" data-testid={`project-tech-${index}`}>
-                  {project.technologies}
-                </p>
-                <p className="text-sm leading-relaxed mb-3" data-testid={`project-description-${index}`}>
-                  {project.description}
-                </p>
-                <div className="inline-block">
-                  <span className="text-sm text-accent hover:underline cursor-pointer" data-testid={`project-link-${index}`}>
-                    VIEW RELATED PROJECT →
-                  </span>
-                </div>
+        <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-8" data-testid="projects-title">
+          Featured Projects
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-8 space-y-0">
+          {projects.map((project, index) => (
+            <div key={index} data-testid={`project-${index}`}>
+              <h3 className="text-lg font-serif mb-2" data-testid={`project-title-${index}`}>
+                {project.title}
+              </h3>
+              <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider" data-testid={`project-tech-${index}`}>
+                {project.technologies}
+              </p>
+              <p className="text-sm leading-relaxed mb-3" data-testid={`project-description-${index}`}>
+                {project.description}
+              </p>
+              <div className="inline-block">
+                <span className="text-sm text-accent hover:underline cursor-pointer" data-testid={`project-link-${index}`}>
+                  VIEW RELATED PROJECT →
+                </span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
