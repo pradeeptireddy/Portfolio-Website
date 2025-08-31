@@ -16,9 +16,6 @@ export default function ContactSection() {
           <p className="text-sm text-gray-300" data-testid="contact-title">
             Full Stack Engineer
           </p>
-          <p className="text-xs text-gray-400" data-testid="contact-location">
-            from Boston, currently based in Boston
-          </p>
         </div>
         
         <div className="max-w-2xl mx-auto mb-8">
