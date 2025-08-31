@@ -21,22 +21,54 @@ export default function ContactSection() {
           </p>
         </div>
         
-        <div className="space-y-4 mb-8">
-          <p className="text-base text-gray-400" data-testid="contact-prompt">
-            Get in touch at
-          </p>
-          
-          <div>
-            <p className="text-base">
-              <a 
-                href="mailto:pradeeptireddy@gmail.com" 
-                className="hover:text-gray-300 transition-colors"
-                data-testid="contact-email"
-              >
-                pradeeptireddy@gmail.com
-              </a>
-            </p>
-          </div>
+        <div className="max-w-md mx-auto mb-8">
+          <form 
+            action="https://formspree.io/f/mdklzlzn" 
+            method="POST" 
+            className="space-y-4"
+            data-testid="contact-form"
+          >
+            <div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-gray-500 transition-colors"
+                data-testid="contact-name-input"
+              />
+            </div>
+            
+            <div>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-gray-500 transition-colors"
+                data-testid="contact-subject-input"
+              />
+            </div>
+            
+            <div>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+                rows={4}
+                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-gray-500 transition-colors resize-none"
+                data-testid="contact-message-input"
+              />
+            </div>
+            
+            <button
+              type="submit"
+              className="w-full py-3 bg-white text-black font-medium hover:bg-gray-200 transition-colors rounded-md"
+              data-testid="contact-submit-button"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
         
         <div className="flex justify-center space-x-8 text-sm font-medium tracking-wider uppercase">
