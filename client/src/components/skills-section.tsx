@@ -19,7 +19,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section className="py-6 sm:py-8 px-4 sm:px-6 bg-secondary/50">
+    <section className="py-6 sm:py-8 px-4 sm:px-6 bg-secondary/50 text-foreground">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-6" data-testid="skills-title">
           Technical Expertise

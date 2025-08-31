@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ThemeToggle from "./theme-toggle";
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("about");
@@ -45,7 +46,8 @@ export default function Navigation() {
           <div className="text-sm font-medium tracking-wider">
             <span className="text-accent">↑</span>
           </div>
-          <div className="flex space-x-4 sm:space-x-8 text-xs sm:text-sm font-medium tracking-wider uppercase">
+          <div className="flex items-center space-x-4">
+            <div className="flex space-x-4 sm:space-x-8 text-xs sm:text-sm font-medium tracking-wider uppercase">
             <button 
               onClick={() => scrollToSection('projects')}
               className={`hover:text-accent transition-colors ${activeSection === 'projects' ? 'text-accent' : ''}`}
@@ -74,6 +76,8 @@ export default function Navigation() {
             >
               Contact
             </button>
+            </div>
+            <ThemeToggle />
           </div>
         </div>
       </div>
