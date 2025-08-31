@@ -40,12 +40,12 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border" data-testid="navigation">
-      <div className="max-w-6xl mx-auto px-6 py-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
           <div className="text-sm font-medium tracking-wider">
             <span className="text-accent">↑</span>
           </div>
-          <div className="flex space-x-8 text-sm font-medium tracking-wider uppercase">
+          <div className="flex space-x-4 sm:space-x-8 text-xs sm:text-sm font-medium tracking-wider uppercase">
             <button 
               onClick={() => scrollToSection('projects')}
               className={`hover:text-accent transition-colors ${activeSection === 'projects' ? 'text-accent' : ''}`}

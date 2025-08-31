@@ -25,7 +25,7 @@ export default function ContactSection() {
             className="space-y-4"
             data-testid="contact-form"
           >
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 type="text"
                 name="name"
@@ -76,10 +76,10 @@ export default function ContactSection() {
           </form>
         </div>
         
-        <div className="flex justify-center space-x-8 text-sm font-medium tracking-wider uppercase">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-sm font-medium tracking-wider uppercase">
           {socialLinks.map((link, index) => (
             <span key={index} className="flex items-center">
-              {index > 0 && <span className="text-gray-600 mr-8">/</span>}
+              {index > 0 && <span className="text-gray-600 mr-2 sm:mr-8 hidden sm:inline">/</span>}
               <a 
                 href={link.url}
                 className="hover:text-gray-300 transition-colors"

@@ -23,7 +23,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-12 px-6 section-transition">
+    <section id="projects" className="py-8 sm:py-12 px-4 sm:px-6 section-transition">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-4" data-testid="projects-title">
@@ -32,7 +32,7 @@ export default function ProjectsSection() {
           
           <div className="space-y-8">
             {projects.map((project, index) => (
-              <div key={index} className="border-l-2 border-muted pl-8" data-testid={`project-${index}`}>
+              <div key={index} className="border-l-2 border-muted pl-4 sm:pl-8" data-testid={`project-${index}`}>
                 <h3 className="text-lg font-serif mb-2" data-testid={`project-title-${index}`}>
                   {project.title}
                 </h3>
