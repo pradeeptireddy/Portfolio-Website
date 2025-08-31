@@ -21,26 +21,30 @@ export default function EducationSection() {
   ];
 
   return (
-    <section className="py-10 px-6">
+    <section id="education" className="py-12 sm:py-16 px-4 sm:px-6 section-transition">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-6" data-testid="education-title">
+        <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-8" data-testid="education-title">
           Education
         </h2>
         
-        <div className="space-y-4">
+        <div className="space-y-6">
           {education.map((edu, index) => (
-            <div key={index} className="border-l-2 border-muted pl-8" data-testid={`education-${index}`}>
-              <h3 className="text-base font-serif mb-1" data-testid={`education-degree-${index}`}>
-                {edu.degree}
-              </h3>
-              <p className="text-sm text-muted-foreground mb-1" data-testid={`education-institution-${index}`}>
-                {edu.institution}
-              </p>
-              <p className="text-sm text-muted-foreground uppercase tracking-wider" data-testid={`education-period-${index}`}>
-                {edu.period}
-              </p>
+            <div key={index} className="border-l-2 border-muted pl-4 sm:pl-8" data-testid={`education-${index}`}>
+              <div className="flex flex-wrap items-baseline gap-2 mb-1">
+                <h3 className="text-lg font-serif" data-testid={`education-degree-${index}`}>
+                  {edu.degree}
+                </h3>
+                <span className="text-base text-muted-foreground">|</span>
+                <p className="text-base text-muted-foreground" data-testid={`education-institution-${index}`}>
+                  {edu.institution}
+                </p>
+                <span className="text-base text-muted-foreground">|</span>
+                <p className="text-xs text-muted-foreground uppercase tracking-wider" data-testid={`education-period-${index}`}>
+                  {edu.period}
+                </p>
+              </div>
               {edu.specialization && (
-                <p className="text-sm text-muted-foreground mt-1" data-testid={`education-specialization-${index}`}>
+                <p className="text-sm text-muted-foreground" data-testid={`education-specialization-${index}`}>
                   {edu.specialization}
                 </p>
               )}
