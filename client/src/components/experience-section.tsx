@@ -36,7 +36,7 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id="resume" className="py-8 sm:py-12 px-4 sm:px-6 section-transition">
+    <section id="resume" className="py-12 sm:py-16 px-4 sm:px-6 section-transition">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-8" data-testid="experience-title">
           Professional Experience

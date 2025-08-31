@@ -23,7 +23,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-8 sm:py-12 px-4 sm:px-6 section-transition">
+    <section id="projects" className="py-12 sm:py-16 px-4 sm:px-6 section-transition">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <h2 className="text-sm font-medium tracking-wider uppercase text-accent mb-4" data-testid="projects-title">
