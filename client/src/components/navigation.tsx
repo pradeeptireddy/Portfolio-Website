@@ -49,18 +49,18 @@ export default function Navigation() {
           <div className="flex items-center space-x-4">
             <div className="flex space-x-4 sm:space-x-8 text-xs sm:text-sm font-medium tracking-wider uppercase">
             <button 
-              onClick={() => scrollToSection('projects')}
-              className={`hover:text-accent transition-colors ${activeSection === 'projects' ? 'text-accent' : ''}`}
-              data-testid="nav-projects"
-            >
-              Projects
-            </button>
-            <button 
               onClick={() => scrollToSection('about')}
               className={`hover:text-accent transition-colors ${activeSection === 'about' ? 'text-accent' : ''}`}
               data-testid="nav-about"
             >
               About
+            </button>
+            <button 
+              onClick={() => scrollToSection('projects')}
+              className={`hover:text-accent transition-colors ${activeSection === 'projects' ? 'text-accent' : ''}`}
+              data-testid="nav-projects"
+            >
+              Projects
             </button>
             <button 
               onClick={() => scrollToSection('resume')}
