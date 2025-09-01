@@ -9,13 +9,17 @@ export default function SkillsSection() {
       description: "Python, REST APIs, ETL pipelines, command-line tools, Excel macros. Specialized in metadata tagging, data annotation schema, and structured data transformation."
     },
     {
-      title: "Healthcare Platforms",
-      description: "Veeva Vault, Salesforce Health Cloud, CTIS, ClinicalTrials.gov. Deep understanding of regulated environments and compliance requirements."
+      title: "ML & AI",
+      description: "PyTorch, TensorFlow, NumPy, Pandas, scikit-learn, Prometheus, Jupyter (ML-adjacent infra)"
     },
+    
     {
       title: "Development Practices",
       description: "Agile methodologies, CI/CD collaboration, comprehensive documentation, user-centered workflows. Experience with UAT, manual QA, and stakeholder sign-off processes."
     }
+      { title: "Healthcare Platforms",
+        description: "Veeva Vault, Salesforce Health Cloud, CTIS, ClinicalTrials.gov. Deep understanding of regulated environments and compliance requirements."
+      }
   ];
 
   return (
