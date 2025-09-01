@@ -16,8 +16,8 @@ export default function SkillsSection() {
     {
       title: "Development Practices",
       description: "Agile methodologies, CI/CD collaboration, comprehensive documentation, user-centered workflows. Experience with UAT, manual QA, and stakeholder sign-off processes."
-    }
-      { title: "Healthcare Platforms",
+    },
+    { title: "Healthcare Platforms",
         description: "Veeva Vault, Salesforce Health Cloud, CTIS, ClinicalTrials.gov. Deep understanding of regulated environments and compliance requirements."
       }
   ];
