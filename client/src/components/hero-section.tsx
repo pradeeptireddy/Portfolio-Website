@@ -31,9 +31,7 @@ export default function HeroSection() {
             className="text-sm text-muted-foreground pt-4"
             data-testid="hero-description-3"
           >
-            Bits and pieces from my engineering process, project experiments and
-            professional work — all raw and unfiltered. Watch this space as I
-            continue building ↓
+            Watch this space as I continue building ↓
           </p>
         </div>
       </div>
