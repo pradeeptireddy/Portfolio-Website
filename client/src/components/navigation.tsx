@@ -43,10 +43,13 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border" data-testid="navigation">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex justify-between items-center">
-          <div className="text-sm font-medium tracking-wider">
-            <span className="text-accent">↑</span>
-          </div>
           <div className="flex items-center space-x-4">
+            <div className="text-sm font-medium tracking-wider">
+              <span className="text-accent">↑</span>
+            </div>
+            <ThemeToggle />
+          </div>
+          <div className="flex items-center">
             <div className="flex space-x-4 sm:space-x-8 text-xs sm:text-sm font-medium tracking-wider uppercase">
             <button 
               onClick={() => scrollToSection('about')}
@@ -77,7 +80,6 @@ export default function Navigation() {
               Contact
             </button>
             </div>
-            <ThemeToggle />
           </div>
         </div>
       </div>

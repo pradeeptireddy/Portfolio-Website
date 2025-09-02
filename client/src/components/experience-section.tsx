@@ -1,5 +1,7 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 export default function ExperienceSection() {
-  const experiences = [
+  const currentRoles = [
     {
       title: "Software Engineer",
       company: "ClaritiDox, LLC",
@@ -21,7 +23,10 @@ export default function ExperienceSection() {
         "Designed RESTful APIs to synchronize regulatory platforms with operational performance trackers, enabling real-time visibility into submission and trial milestones. Led implementation of Veeva Vault dashboards and Standard Operating Procedures.",
         "Partnered with backend and product teams to improve data conventions, reducing manual interventions by 40%. Delivered documentation and training for internal users navigating new AI-aligned pipelines."
       ]
-    },
+    }
+  ];
+
+  const previousRoles = [
     {
       title: "Clinical Data Systems & Regulatory Operations",
       company: "Various Biotech & Pharma Clients",
@@ -35,6 +40,28 @@ export default function ExperienceSection() {
     }
   ];
 
+  const renderExperienceCard = (experience: any, index: number, prefix: string) => (
+    <div key={index} data-testid={`experience-${prefix}-${index}`}>
+      <h3 className="text-lg font-serif mb-1" data-testid={`experience-title-${prefix}-${index}`}>
+        {experience.title}
+      </h3>
+      <p className="text-base text-muted-foreground mb-1" data-testid={`experience-company-${prefix}-${index}`}>
+        {experience.company} {experience.location && `| ${experience.location}`}
+      </p>
+      <p className="text-xs text-muted-foreground mb-4 uppercase tracking-wider" data-testid={`experience-period-${prefix}-${index}`}>
+        {experience.period}
+      </p>
+      
+      <div className="space-y-3 text-sm leading-relaxed max-h-64 overflow-y-auto pr-2 custom-scrollbar">
+        {experience.description.map((paragraph: string, pIndex: number) => (
+          <p key={pIndex} data-testid={`experience-description-${prefix}-${index}-${pIndex}`}>
+            {paragraph}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <section id="resume" className="py-6 sm:py-8 px-4 sm:px-6 section-transition bg-background text-foreground">
       <div className="max-w-6xl mx-auto">
@@ -42,29 +69,24 @@ export default function ExperienceSection() {
           Professional Experience
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-8 space-y-0">
-          {experiences.map((experience, index) => (
-            <div key={index} data-testid={`experience-${index}`}>
-              <h3 className="text-lg font-serif mb-1" data-testid={`experience-title-${index}`}>
-                {experience.title}
-              </h3>
-              <p className="text-base text-muted-foreground mb-1" data-testid={`experience-company-${index}`}>
-                {experience.company} {experience.location && `| ${experience.location}`}
-              </p>
-              <p className="text-xs text-muted-foreground mb-4 uppercase tracking-wider" data-testid={`experience-period-${index}`}>
-                {experience.period}
-              </p>
-              
-              <div className="space-y-3 text-sm leading-relaxed">
-                {experience.description.map((paragraph, pIndex) => (
-                  <p key={pIndex} data-testid={`experience-description-${index}-${pIndex}`}>
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
+        <Tabs defaultValue="current" className="w-full" data-testid="experience-tabs">
+          <TabsList className="mb-6" data-testid="experience-tabs-list">
+            <TabsTrigger value="current" data-testid="tab-current">Recent Roles (2022-2024)</TabsTrigger>
+            <TabsTrigger value="previous" data-testid="tab-previous">Consulting & Operations (2013-2022)</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="current" data-testid="tab-content-current">
+            <div className="grid md:grid-cols-2 gap-8 space-y-0">
+              {currentRoles.map((experience, index) => renderExperienceCard(experience, index, 'current'))}
             </div>
-          ))}
-        </div>
+          </TabsContent>
+          
+          <TabsContent value="previous" data-testid="tab-content-previous">
+            <div className="grid md:grid-cols-1 gap-8">
+              {previousRoles.map((experience, index) => renderExperienceCard(experience, index, 'previous'))}
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );

@@ -1,5 +1,7 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 export default function SkillsSection() {
-  const skillAreas = [
+  const technicalSkills = [
     {
       title: "Frontend Development",
       description: "React, JavaScript, TypeScript, HTML/CSS, responsive UI design, accessibility. Focused on creating intuitive interfaces that transform complex healthcare data into user-friendly experiences."
@@ -11,16 +13,32 @@ export default function SkillsSection() {
     {
       title: "ML & AI",
       description: "PyTorch, TensorFlow, NumPy, Pandas, scikit-learn, Prometheus, Jupyter (ML-adjacent infra)"
+    }
+  ];
+
+  const industrySkills = [
+    {
+      title: "Healthcare Platforms",
+      description: "Veeva Vault, Salesforce Health Cloud, CTIS, ClinicalTrials.gov. Deep understanding of regulated environments and compliance requirements."
     },
-    
     {
       title: "Development Practices",
       description: "Agile methodologies, CI/CD collaboration, comprehensive documentation, user-centered workflows. Experience with UAT, manual QA, and stakeholder sign-off processes."
-    },
-    { title: "Healthcare Platforms",
-        description: "Veeva Vault, Salesforce Health Cloud, CTIS, ClinicalTrials.gov. Deep understanding of regulated environments and compliance requirements."
-      }
+    }
   ];
+
+  const renderSkillCard = (skill: any, index: number, prefix: string) => (
+    <div key={index} data-testid={`skill-area-${prefix}-${index}`}>
+      <h3 className="text-base font-serif mb-3" data-testid={`skill-title-${prefix}-${index}`}>
+        {skill.title}
+      </h3>
+      <div className="max-h-32 overflow-y-auto pr-2 custom-scrollbar">
+        <p className="text-sm leading-relaxed mb-3" data-testid={`skill-description-${prefix}-${index}`}>
+          {skill.description}
+        </p>
+      </div>
+    </div>
+  );
 
   return (
     <section className="py-6 sm:py-8 px-4 sm:px-6 bg-secondary/50 text-foreground">
@@ -29,18 +47,24 @@ export default function SkillsSection() {
           Technical Expertise
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-6">
-          {skillAreas.map((skill, index) => (
-            <div key={index} data-testid={`skill-area-${index}`}>
-              <h3 className="text-base font-serif mb-3" data-testid={`skill-title-${index}`}>
-                {skill.title}
-              </h3>
-              <p className="text-sm leading-relaxed mb-3" data-testid={`skill-description-${index}`}>
-                {skill.description}
-              </p>
+        <Tabs defaultValue="technical" className="w-full" data-testid="skills-tabs">
+          <TabsList className="mb-6" data-testid="skills-tabs-list">
+            <TabsTrigger value="technical" data-testid="tab-technical">Technical Skills</TabsTrigger>
+            <TabsTrigger value="industry" data-testid="tab-industry">Industry & Process</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="technical" data-testid="tab-content-technical">
+            <div className="grid md:grid-cols-2 gap-6">
+              {technicalSkills.map((skill, index) => renderSkillCard(skill, index, 'technical'))}
             </div>
-          ))}
-        </div>
+          </TabsContent>
+          
+          <TabsContent value="industry" data-testid="tab-content-industry">
+            <div className="grid md:grid-cols-2 gap-6">
+              {industrySkills.map((skill, index) => renderSkillCard(skill, index, 'industry'))}
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );
